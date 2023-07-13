@@ -1,0 +1,272 @@
+@import url(../fonts/manrope/manrope.css);
+@import url(../fonts/cormorant/cormorant.css);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+@media screen and (min-width:1200px) {
+    html, body {
+        max-width: 1920px;
+        background: #faf5f5;
+        font-family: "manrope";
+        letter-spacing: 0.04em;
+        color: #000;
+    }
+    
+    header {
+        max-width: 856px;
+        height: 88px;
+        margin: 0 auto;
+        font-size: 1.5em;
+        margin-bottom: 2em;
+        border-bottom: 2px solid #000;
+    }
+    
+    .content {
+        max-width: 1296px;
+        margin: 0 auto;
+    }
+    
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #000;
+        padding: 1em 2em;
+        white-space: nowrap;
+    }
+    
+    .header__bar {
+        display: flex;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+        margin: 0.5em 0;
+        flex-wrap: nowrap;
+    }
+
+    .info__stylist {
+        display: grid;
+        justify-content: center;
+        grid-template-areas: "profession profession"
+                            "name name" 
+                            "img location";
+        grid-template-columns: auto 1.5em;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    h1 {
+        grid-area: name;
+        text-align: center;
+        font-family: 'cormorant';
+        font-weight: 600;
+        font-style: italic;
+        font-size: 5em;
+        text-transform: uppercase;
+        margin-bottom: 0.2em;
+    }
+
+    .stylist__photo {
+        grid-area: img;
+        display: block;
+        width: 32em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .profession {
+        grid-area: profession;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    .location {
+        grid-area: location;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        margin: 0.5em 0 -27em 0;
+    }
+
+    .main__btn {
+        padding: 0.5em;
+        display: block;
+        margin: 0 auto;
+        font-size: 1.5em;
+        font-weight: 400;
+        white-space: nowrap;
+        text-align: center;
+        border: 2px solid #000;
+        width: 18em;
+        margin-bottom: 1.5em;
+    }
+
+    .paragraph {
+        border-top: 2px solid #000;
+        padding: 0.5em;
+        text-align: center;
+        font-family: 'cormorant';
+        font-weight: 400;
+        font-style: italic;
+        font-size: 3em;
+        text-transform: uppercase;
+        margin-bottom: 0.2em;
+    }
+
+    .about_me {
+        display: block;
+        margin: 0 auto;
+        max-width: 856px;
+    }
+
+    .introduction {
+        line-height: 2em;
+        font-size: 1.5em;
+    }
+
+    .blockquote {
+        position: relative;
+        display: block;
+        padding: 1.5em;
+        max-width: 640px;
+        margin: 3em auto;
+        border-top: solid 1px #000;
+        border-bottom: solid 1px #000;
+    }
+
+    .quote {
+        font-size: 2em;
+    }
+
+    .quote, .author{
+        padding: 0 1em;
+        font-family: 'cormorant';
+        font-style: italic;
+    }
+
+    .blockquote::after {
+        font-family: 'cormorant';
+        font-style: italic;
+        position: absolute;
+        content: "”";
+        color: #000;
+        font-size: 10em;
+        line-height: 0.7em;
+        right: 0.4em;
+    }
+
+    .blockquote h4 {
+        position: relative;
+        color: #000;
+        font-size: 1.5em;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0;
+        padding-top: 20px;
+        z-index: 1;
+    }
+
+}
+
+@media screen and (min-width:320px) and (max-width:1200px) {
+    html, body {
+        min-width: 320px;
+        background: #FFF;
+        font-family: "manrope";
+        letter-spacing: 0.04em;
+        color: #000;
+    }
+    
+    header {
+        min-width: 280px;
+        height: 52px;
+        margin: 0 auto;
+        font-size: 0.9em;
+        margin-bottom: 1em;
+        border-bottom: 2px solid #000;
+    }
+    
+    .content {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #000;
+        padding: 0.7em 1em;
+        white-space: nowrap;
+    }
+    
+    .header__bar {
+        display: flex;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+        margin: 1em 0;
+        text-transform: uppercase;
+        flex-wrap: nowrap;
+    }
+
+    .info__stylist {
+        display: grid;
+        justify-content: center;
+        grid-template-areas: "profession profession"
+                            "name name" 
+                            "img location";
+        grid-template-columns: auto 1.5em;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        grid-area: name;
+        font-family: 'cormorant';
+        font-weight: 600;
+        font-style: italic;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    .stylist__photo {
+        grid-area: img;
+        display: block;
+        width: 14em;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+
+    .profession {
+        grid-area: profession;
+        text-align: right;
+    }
+
+    .location {
+        grid-area: location;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        margin: 0.5em 0 -10.5em 0;
+    }
+
+    .main__btn {
+        display: block;
+        margin: 0 auto;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-align: center;
+        border: 2px solid #000;
+        width: 16em;
+    }
+
+}
