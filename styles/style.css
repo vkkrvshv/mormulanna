@@ -1,5 +1,6 @@
 @import url(../fonts/manrope/manrope.css);
 @import url(../fonts/cormorant/cormorant.css);
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -13,7 +14,7 @@ html, body {
     color: #000;
 }
 
-
+/*! DESKTOP VERSION*/
 @media screen and (min-width:1200px) {
     html, body {
         max-width: 1920px;
@@ -110,7 +111,7 @@ html, body {
     }
 
     .main__btn:hover{
-        background-color: #e3e4e0;
+        background-color: #f5cfc660;
     }
 
     .paragraph {
@@ -125,7 +126,7 @@ html, body {
         margin-bottom: 0.1em;
     }
 
-    .about_me, .contacts__info {
+    .about_me, .contacts__info, .feedback, .contacts {
         display: block;
         margin: 0 auto;
         max-width: 856px;
@@ -253,7 +254,7 @@ html, body {
 
     .service__characteristic::before{
         content:" ";
-        background-color: #e3e4e095;
+        background-color: #f5cfc660;
         display: block;
         position: absolute;
         z-index: -1;
@@ -293,6 +294,77 @@ html, body {
         padding: 0;
         font-weight: 550;
         text-decoration: underline #000 2px;
+    }
+
+    .feedback__content {
+        max-width: 896px;
+        margin: 0 auto;
+    }
+
+    .feedback__slider {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto 1rem auto;
+        height: 500px;
+    }
+
+    .feedback__img{
+        margin: auto;
+        max-width: 280px;
+        animation: show .5s;
+    }
+
+    @keyframes show {
+        from {
+            transform:scale(0.7);
+            opacity:0
+        }
+        to {
+            transform: scale(1);
+            opacity:1
+        }
+    }
+
+    .slider {
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 57px;
+        height: 57px;
+        background: 18px url(../images/slider_arrow.svg) no-repeat;
+        cursor: pointer;
+    }
+
+    .right {
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    
+    .slider::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 57px;
+        height: 57px;
+        border-radius: 8px;
+        background: rgba(233, 230, 217, 0.1);
+    }
+    .slider:hover::before {
+        background: #f5cfc660;
+    }
+
+    .contacts__items {
+        display: grid;
+        grid-template-areas: "picon phone"
+                            "micon mail"
+                            "iicon inst";
+        justify-items: start;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 3rem auto 0 auto;
     }
 }
 

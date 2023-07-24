@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/color_bg_change.js" defer></script>
+    <script src="./scripts/slider.js" defer></script>
     <title>Стилист Анна Мормуль</title>
 </head>
 <body>
@@ -164,6 +166,17 @@
                     </details>
                 </div>
             </div>
+            <div class="feedback">
+                <h2 class="paragraph">Отзывы</h2>
+                <div class="feedback__slider">
+                    <div class="left slider" onclick="plusSlides(-1)"></div>
+                        <img class="feedback__img" src="./images/feedback1.jpg" alt="feedback">
+                        <img class="feedback__img" src="./images/feedback2.jpg" alt="feedback">
+                        <img class="feedback__img" src="./images/feedback3.jpg" alt="feedback">
+                        <img class="feedback__img" src="./images/feedback4.jpg" alt="feedback">
+                    <div class="right slider" onclick="plusSlides(1)"></div>
+                </div>
+            </div>
             <div class="contacts">
                 <h2 class="paragraph" id="contacts">Контакты</h2>
                 <div class="contacts__info">
@@ -171,7 +184,15 @@
                         <a class="contacts__textlink" href="https://wa.me/79652821616?text=Здравствуйте!+Меня+заинтересовала+Ваша+услуга.">WhatsApp</a>, <a class="contacts__textlink" href="https://instagram.com/mormul_anny/">Instagram</a> или на адрес 
                         <a class="contacts__textlink" href="mailto:mormulanny@yandex.ru&body=Здравствуйте! Меня заинтересовала Ваша услуга.">электронной почты</a>. 
                         <br>С радостью отвечу на все интересующие Вас вопросы! </p>
-                        <h2 class="paragraph">Анна Мормуль</h2>
+                        <p class="quote" style="text-align: center;">В Вашей жизни появится дата, с которой начнется новый этап:
+                            <br> в голове, в жизни, в гардеробе. 
+                            <br> Проверено на 100%, работает!
+                            </p>
+                    <div class="contacts__items">
+                        <img class="phone icon" src="./images/phone_icon.svg" alt="phone_icon"><p class="phone">8 (965) 282-16-16</p>
+                        <img class="mail icon" src="./images/mail_icon.svg" alt="mail_icon"><p class="mail">mormulanny@yandex.ru</p>
+                        <img class="inst icon"src="./images/instagram_icon.svg" alt="instagram_icon"><p class="inst">mormul_anny</p>
+                    </div>
                 </div>
             </div>
         </div>
