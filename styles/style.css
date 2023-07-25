@@ -460,7 +460,7 @@ html, body {
         padding: 0.5em;
         display: block;
         margin: 0 auto;
-        font-size: 1em;
+        font-size: 0.7em;
         font-weight: 400;
         white-space: nowrap;
         text-align: center;
@@ -592,6 +592,7 @@ html, body {
         cursor: pointer;
         font-weight: bold;
         list-style: none;
+        -webkit-list-style: none;
     }
     
     .spoiler-details[open] .service__title {
@@ -634,6 +635,8 @@ html, body {
         text-transform: capitalize;
         border-bottom: none;
         margin: 1rem 0 1rem 1.5rem;
+        list-style: none;
+        -webkit-list-style: none;
     }
 
     .service__options[open] {
