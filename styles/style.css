@@ -14,6 +14,25 @@ html, body {
     color: #000;
 }
 
+@keyframes show {
+    from {
+        transform:scale(0.7);
+        opacity:0
+    }
+    to {
+        transform: scale(1);
+        opacity:1
+    }
+}
+
+.slider:hover::before {
+    background: #f5cfc660;
+}
+
+.right {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 /*! DESKTOP VERSION*/
 @media screen and (min-width:1200px) {
     html, body {
@@ -317,17 +336,6 @@ html, body {
         animation: show .5s;
     }
 
-    @keyframes show {
-        from {
-            transform:scale(0.7);
-            opacity:0
-        }
-        to {
-            transform: scale(1);
-            opacity:1
-        }
-    }
-
     .slider {
         display: block;
         position: relative;
@@ -336,10 +344,6 @@ html, body {
         height: 57px;
         background: 18px url(../images/slider_arrow.svg) no-repeat;
         cursor: pointer;
-    }
-
-    .right {
-        transform: matrix(-1, 0, 0, 1, 0, 0);
     }
     
     .slider::before {
@@ -351,9 +355,6 @@ html, body {
         border-radius: 8px;
         background: rgba(233, 230, 217, 0.1);
     }
-    .slider:hover::before {
-        background: #f5cfc660;
-    }
 
     .contacts__items {
         display: grid;
@@ -363,8 +364,12 @@ html, body {
         justify-items: start;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
-        margin: 3rem auto 0 auto;
+        margin: 0 auto 2rem auto;
+        font-size: 1.25em;
+    }
+
+    .contacts__items > a {
+        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -568,5 +573,145 @@ html, body {
     .services {
         max-width: 280px;
         margin: 0 auto;
+    }
+
+    .spoiler-details {
+        border: 2px solid #000;
+        border-radius: 5px;
+        padding: 1rem;
+        margin: 0 0 1rem 0;
+        max-width: 100%;
+        min-width: 300px;
+        font-size: 0.7em;
+    }
+
+    .spoiler-details summary {
+        font-size: 1.5em;
+        font-family: 'cormorant';
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+        list-style: none;
+    }
+    
+    .spoiler-details[open] .service__title {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #000;
+    }
+
+    .service__characteristic, .service__purpose {
+        position: relative;
+        margin: 1rem 1.25rem 0 1.25rem;
+        font-size: 1em;
+        font-weight: 550;
+        z-index: 1;
+    }
+
+    .service__characteristic::before{
+        content:" ";
+        background-color: #f5cfc660;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .service__purpose {
+        margin: 0.5rem 1rem 0 1.75rem;
+        list-style-type: '—  ';
+        font-weight: normal;
+        font-size: 1em;
+    }
+
+    .service__description {
+        margin: 1rem 0;
+        line-height: 1rem;
+        font-size: 1em;
+    }
+
+    .service__options .service__subtitle {
+        text-transform: capitalize;
+        border-bottom: none;
+        margin: 1rem 0 1rem 1.5rem;
+    }
+
+    .service__options[open] {
+        padding-bottom: 1.25rem;
+        border-bottom: 2px solid #000;
+    }
+
+    ol li {
+        margin: 0.75rem 1rem 0 1.5rem;
+        font-size: 1em;
+        line-height: 1rem;
+    }
+
+    .contacts__textlink {
+        padding: 0;
+        font-weight: 550;
+        text-decoration: underline #000 2px;
+    }
+
+    .feedback__content {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .feedback__slider {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto 1rem auto;
+        height: 360px;
+    }
+
+    .feedback__img{
+        margin: auto;
+        max-width: 220px;
+        animation: show .5s;
+    }
+
+    .slider {
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 16px;
+        height: 16px;
+        background: 4px 3px url(../images/slider_arrow.svg) no-repeat;
+        background-size: 70%;
+        cursor: pointer;
+    }
+    
+    .slider::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background: rgba(233, 230, 217, 0.1);
+    }
+
+    .contacts__items {
+        display: grid;
+        grid-template-areas: "picon phone"
+                            "micon mail"
+                            "iicon inst";
+        justify-items: start;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem auto;
+        font-size: 0.7em;
+    }
+
+    .icon {
+        height: 1em;
+    }
+
+    .contacts__items > a {
+        padding: 0.5rem 1rem;
     }
 }
