@@ -600,7 +600,6 @@ html, body {
     }
 
     .service__characteristic, .service__purpose {
-        position: relative;
         margin: 1rem 1.25rem 0 1.25rem;
         font-size: 1em;
         font-weight: 550;
