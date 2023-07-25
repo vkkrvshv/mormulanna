@@ -292,10 +292,11 @@ html, body {
         line-height: 2rem;
     }
 
-    .service__options .service__subtitle {
+    .service__options summary {
         text-transform: capitalize;
         border-bottom: none;
         margin: 1.5rem 0 1.5rem 1.5rem;
+        list-style: "► ";
     }
 
     .service__options[open] {
@@ -591,8 +592,6 @@ html, body {
         text-transform: uppercase;
         cursor: pointer;
         font-weight: bold;
-        list-style: none;
-        -webkit-list-style: none;
     }
     
     .spoiler-details[open] .service__title {
@@ -635,8 +634,8 @@ html, body {
         text-transform: capitalize;
         border-bottom: none;
         margin: 1rem 0 1rem 1.5rem;
-        list-style: none;
-        -webkit-list-style: none;
+        list-style: initial;
+        -webkit-list-style: initial;
     }
 
     .service__options[open] {
